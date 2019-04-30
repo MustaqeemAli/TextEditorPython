@@ -1,0 +1,19 @@
+def redo(event=None):
+        textArea.event_generate("<<Redo>>")
+        return
+
+def undo(event=None):
+        textArea.event_generate("<<Undo>>")
+        return
+
+def paste(event=None):
+         textArea.event_generate("<<Paste>>")
+         return
+
+def cut(event=None):
+        textArea.event_generate("<<Cut>>")
+        return
+
+def copy(event=None):
+        textArea.event_generate("<<Copy>>")
+        return
