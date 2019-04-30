@@ -1,0 +1,13 @@
+def exit():
+    if messagebox.askyesno("Quit","Are you sure you want to quit"):
+        window.destroy()
+def helpview():
+    webbrowser.open_new("//This will be a custom help page")//Aijaz
+    
+def aboutnot():
+ 
+    messagebox.showinfo('About Notepad', 'Microsoft Windows \n \n Version 1803 OS 17134.40 \n \nNotepad is a simple text editor for Microsoft Windows and a basic text-editing program which enables computer users to create documents. It was first released as a mouse-based MS-DOS program in 1983 \n \n \n \nThis product is licensed under the Microsoft Software License Terms to: \nUsama')
+
+window.title("Untitled-Notepad")
+window.geometry('500x400') // windows size will be resized to 1366x768
+menu = Menu(window)
