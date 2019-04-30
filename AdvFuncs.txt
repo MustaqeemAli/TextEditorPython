@@ -1,0 +1,32 @@
+def new_fle():
+    file=filedialog.asksaveasfile(mode='w', defaultextension=".txt",filetypes=(("HTML Files","*.html"),("Text Files","*.txt"),("All Files","*.*")))
+    window.title(os.path.basename(file.name)+ " -Notepad")
+    if len(textArea.get('1.0',END+'-1c'))>0:
+        if messagebox.askyesno("Save","Do wish to save ?"):
+            svfil()
+        else:
+            textArea.delete('1.0',END)
+        
+//labels will be changed
+def fnd_txt(): // used to find text
+    findString= simpledialog.askstring("Find...","Enter Text")
+    textData=textArea.get('1.0',END)
+    occurances = textData.upper().count(findString.upper())
+    #if textData.upper().count(findString.upper()) ==1:
+        #label = messagebox.showinfo("Result:  "  ,findString +"  has once occurances,"+ str(occurances))
+    elif textData.upper().count(findString.upper()) ==2:
+        #label = messagebox.showinfo("Result:  "  ,findString +"  has twice occurance,"+ str(occurances)) 
+    elif textData.upper().count(findString.upper()) ==3:
+        #label = messagebox.showinfo("Result:  "  ,findString +"  has thrice occurances,"+ str(occurances))
+    elif textData.upper().count(findString.upper()) >4 or textData.upper().count(findString.upper()) ==4:
+        #label = messagebox.showinfo("Result:  "  ,findString +"  has multiple occurances,"+ str(occurances))    
+    else:
+        #label= messagebox.showinfo("Results","Not Found")
+
+def opnfil():
+    file=filedialog.askopenfile(parent=window, title="select a text file",filetypes=(("Text Files","*.txt"),("All Files","*.*")))
+    window.title(os.path.basename(file.name)+ " -Notepad")
+    if file != None:
+        contents=file.read()
+        textArea.insert('1.0',contents)
+        file.close()
