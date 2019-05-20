@@ -1,0 +1,32 @@
+def redo(event=None):
+        textArea.event_generate("<<Redo>>")
+        return
+
+def undo(event=None):
+        textArea.event_generate("<<Undo>>")
+        return
+
+def paste(event=None):
+         textArea.event_generate("<<Paste>>")
+         return
+
+def cut(event=None):
+        textArea.event_generate("<<Cut>>")
+        return
+
+def copy(event=None):
+        textArea.event_generate("<<Copy>>")
+        return
+#------------------------------------------------#
+
+ednew_item.add_command(label='Undo',command=undo)
+ednew_item.add_separator()
+ednew_item.add_command(label='Cut',command=cut)
+ednew_item.add_command(label='Copy',command=copy)
+ednew_item.add_command(label='Paste',command=paste)
+ednew_item.add_command(label='Redo',command=redo)
+ednew_item.add_separator()
+ednew_item.add_command(label='Fint Text',command=fnd_txt)
+ednew_item.add_separator()
+ednew_item.add_command(label='Select All',command=select_all)
+ednew_item.add_command(label='Time/Date',command=tme)
