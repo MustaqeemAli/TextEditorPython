@@ -1,0 +1,51 @@
+from tkinter import *
+import os
+from tkinter import messagebox, filedialog, Tk, simpledialog
+import webbrowser 
+from tkinter import scrolledtext
+from tkinter import Menu
+import datetime
+ 
+window = Tk() 
+
+window.title("NewDocument-BTE")
+window.geometry('800x640') 
+menu = Menu(window)
+
+ 
+filnew_item = Menu(menu)
+fntnew_item = Menu(menu)
+helnew_item = Menu(menu)
+adnew_item = Menu(menu)
+ednew_item = Menu(menu)
+
+
+
+filnew_item.add_command(label='New')
+filnew_item.add_command(label='Open...')
+filnew_item.add_command(label='Save')
+filnew_item.add_command(label='Exit')
+ 
+helnew_item.add_command(label='View Help')
+helnew_item.add_separator()
+helnew_item.add_command(label='About Notepad')
+menu.add_cascade(label='File')
+
+menu.add_cascade(label='Edit')
+
+menu.add_cascade(label='Insert')
+
+menu.add_cascade(label='Help')
+
+
+#S = Scrollbar(window)
+textArea = scrolledtext.ScrolledText(window, height=400, width=500)
+#S.pack(side=RIGHT, fill=Y)
+textArea.pack(side=LEFT, fill=Y)
+#S.config(command=textArea.yview)
+textArea.config()
+quote = """"""
+textArea.insert(END, quote)
+window.config(menu=menu) 
+
+window.mainloop()
