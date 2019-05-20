@@ -30,3 +30,9 @@ def opnfil():
         contents=file.read()
         textArea.insert('1.0',contents)
         file.close()
+ 
+ 
+filnew_item.add_command(label='New',command=new_fle)
+filnew_item.add_command(label='Open...',command=opnfil)
+filnew_item.add_command(label='Save',command=svfil)
+filnew_item.add_command(label='Exit',command=exit)
