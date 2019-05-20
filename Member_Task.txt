@@ -1,0 +1,8 @@
+Mustaqeem
+Task: GUI and finalizing the program
+Ashmal
+Task: Advanced fuctions for Notepad and debugging
+Aijaz
+Task: Some basic functions for further improvement of code
+Arham
+Task: Ideas for GUI and some more basic fuctions 
