@@ -6,7 +6,6 @@ from tkinter import scrolledtext
 from tkinter import Menu
 import datetime
  
-window = Tk() 
 
 def redo(event=None):
         textArea.event_generate("<<Redo>>")
@@ -85,10 +84,32 @@ def helpview():
 def aboutnot():
  
     messagebox.showinfo('About Notepad', 'BTE \n Basic Text Editor \n Version V1.0.01 Compiled on Python \n \n Credits:\n Mustaqeem \n Ashmal \n Aijaz \n Arham')
+def normal():
 
+    text.config(font = ("Arial", 10))
+
+
+
+def bold():
+
+    text.config(font = ("Arial", 10, "bold"))
+
+
+
+def underline():
+
+    text.config(font = ("Arial", 10, "underline"))
+
+
+
+def italic():
+
+    text.config(font = ("Arial",10,"italic"))
+window = Tk()     
 window.title("NewDocument-BTE")
 window.geometry('800x640') 
 menu = Menu(window)
+window.config(menu=menu) 
 
  
 filnew_item = Menu(menu)
@@ -126,15 +147,34 @@ menu.add_cascade(label='Insert', menu=adnew_item)
 
 menu.add_cascade(label='Help', menu=helnew_item)
 
+formatmenu = Menu(menu)
 
-#S = Scrollbar(window)
+menu.add_cascade(label="Format",menu = formatmenu)
+
+formatmenu.add_separator()
+
+formatmenu.add_radiobutton(label='Normal',command=normal)
+
+formatmenu.add_radiobutton(label='Bold',command=bold)
+
+formatmenu.add_radiobutton(label='Underline',command=underline)
+
+formatmenu.add_radiobutton(label='Italic',command=italic)
+
+
+
+
+                 
+
+
+
+text = Text(window, height=400, width=500, font = ("Arial", 10))
+scroll = Scrollbar(window, command=text.yview)  
+text.pack()
 textArea = scrolledtext.ScrolledText(window, height=400, width=500)
-#S.pack(side=RIGHT, fill=Y)
-textArea.pack(side=LEFT, fill=Y)
-#S.config(command=textArea.yview)
 textArea.config()
 quote = """"""
 textArea.insert(END, quote)
-window.config(menu=menu) 
-
 window.mainloop()
+
+
