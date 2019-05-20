@@ -94,10 +94,8 @@ menu = Menu(window)
 filnew_item = Menu(menu)
 fntnew_item = Menu(menu)
 helnew_item = Menu(menu)
-vwnew_item = Menu(menu)
+adnew_item = Menu(menu)
 ednew_item = Menu(menu)
-
-vwnew_item.add_command(label='Status Bar')
 
 ednew_item.add_command(label='Undo',command=undo)
 ednew_item.add_separator()
@@ -109,7 +107,7 @@ ednew_item.add_separator()
 ednew_item.add_command(label='Fint Text',command=fnd_txt)
 ednew_item.add_separator()
 ednew_item.add_command(label='Select All',command=select_all)
-ednew_item.add_command(label='Time/Date',command=tme)
+adnew_item.add_command(label='Time Stamp',command=tme)
 
 
 
@@ -125,7 +123,7 @@ menu.add_cascade(label='File', menu=filnew_item)
 
 menu.add_cascade(label='Edit', menu=ednew_item)
 
-menu.add_cascade(label='View', menu=vwnew_item)
+menu.add_cascade(label='Insert', menu=adnew_item)
 
 menu.add_cascade(label='Help', menu=helnew_item)
 
