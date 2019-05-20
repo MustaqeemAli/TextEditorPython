@@ -80,7 +80,7 @@ def exit():
     if messagebox.askyesno("Exit","Are you sure you want to exit"):
         window.destroy()
 def helpview():
-    webbrowser.open_new("html.doc")
+    webbrowser.open_new("https://support.microsoft.com/en-us/help/4466414/windows-help-in-notepad")
     
 def aboutnot():
  
