@@ -120,7 +120,6 @@ helnew_item.add_command(label='View Help',command=helpview)
 helnew_item.add_separator()
 helnew_item.add_command(label='About Notepad',command=aboutnot)
 menu.add_cascade(label='File', menu=filnew_item)
-
 menu.add_cascade(label='Edit', menu=ednew_item)
 
 menu.add_cascade(label='Insert', menu=adnew_item)
