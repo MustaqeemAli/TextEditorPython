@@ -12,7 +12,6 @@ window.title("NewDocument-BTE")
 window.geometry('800x640') 
 menu = Menu(window)
 
- 
 filnew_item = Menu(menu)
 fntnew_item = Menu(menu)
 helnew_item = Menu(menu)
